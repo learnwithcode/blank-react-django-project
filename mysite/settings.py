@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    #api docs
+    'rest_framework_swagger', # swagger
     
 ]
 
@@ -153,6 +156,7 @@ REST_FRAMEWORK = {
     ),
 }
 
+REST_FRAMEWORK = {  'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
 # All Auth settings =======================================================================================================
 
 AUTHENTICATION_BACKENDS = (

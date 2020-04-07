@@ -19,9 +19,15 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
+# API DOCS
+from rest_framework_swagger.views import get_swagger_view
+from rest_framework.documentation import include_docs_urls
+schema_view = get_swagger_view(title='API DOCS')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-docs/', schema_view),
+    path('docs/', include_docs_urls(title='API DOCS')),
     #rest auth
     path('rest-auth/', include('rest_auth.urls')),
     #all auth
