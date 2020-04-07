@@ -22,6 +22,8 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #all auth
+    path('accounts/', include('allauth.urls')),
     #DRF
     path('api-auth/', include('rest_framework.urls')),
     #React urls
