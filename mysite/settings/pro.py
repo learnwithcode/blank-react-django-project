@@ -14,6 +14,19 @@ db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 DATABASES['default']['CONN_MAX_AGE'] = 500
 
+#django mail admins sends error reports over mail to admin
+ADMINS = (
+    ('Your Name', 'Youremail@gmail.com'),
+)
+
+# SMTP ===================================================================================================================
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'youremial@gmail.com'
+EMAIL_HOST_PASSWORD = '*********'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 # SSL =====================================================================================================================
 CORS_REPLACE_HTTPS_REFERER      = True
 HOST_SCHEME                     = "https://"
