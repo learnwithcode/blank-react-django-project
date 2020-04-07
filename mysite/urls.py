@@ -22,13 +22,15 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #rest auth
+    path('rest-auth/', include('rest_auth.urls')),
     #all auth
     path('accounts/', include('allauth.urls')),
     #DRF
     path('api-auth/', include('rest_framework.urls')),
     #React urls
     
-    re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
+    # re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
 ]
 
 
