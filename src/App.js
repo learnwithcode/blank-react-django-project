@@ -1,5 +1,7 @@
 import React from 'react';
 
+//local import here.
+import './static/css/style.css'
 
 function App() {
   return (
